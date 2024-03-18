@@ -30,10 +30,10 @@ import {ChartModule} from "primeng/chart";
 })
 export class ForecastComponent implements OnInit {
   characteristics = [
-    {id: 1, name: 'Уровень моря', type: 'sea_level'},
-    {id: 2, name: 'Высота значительной волны', type: 'wave_height'},
-    {id: 3, name: 'Направление волны', type: 'wave_direction'},
-    {id: 4, name: 'Период волны', type: 'wave_period'},
+    {id: 1, name: 'Sea level', type: 'sea_level'},
+    {id: 2, name: 'The height of a significant wave', type: 'wave_height'},
+    {id: 3, name: 'Wave direction', type: 'wave_direction'},
+    {id: 4, name: 'Wave period', type: 'wave_period'},
   ];
   selectedCharacteristic = this.characteristics[0];
   intervals = [

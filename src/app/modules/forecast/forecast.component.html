@@ -1,17 +1,16 @@
 <p-toast></p-toast>
 <p-card>
-  <ng-template pTemplate="header"><h2 class="flex justify-content-center pt-4 text-center">Прогноз гидродинамических
-    процессов на Каспийском море</h2></ng-template>
+  <ng-template pTemplate="header"><h2 class="flex justify-content-center pt-4 text-center">Forecast of hydrodynamic processes in the Caspian Sea</h2></ng-template>
   <ng-template pTemplate="body">
     <div class="flex justify-content-center gap-5 flex-wrap">
       <div class="xl:w-2 flex flex-column gap-3">
         <div class="flex flex-column gap-2">
-          <label for="characteristics" class="font-bold">Характеристика</label>
+          <label for="characteristics" class="font-bold">Specification:</label>
           <p-dropdown id="characteristics" [style]="{'width':'100%'}" [options]="characteristics" optionLabel="name"
                       [(ngModel)]="selectedCharacteristic"></p-dropdown>
         </div>
         <div class="flex flex-column gap-2">
-          <label for="calendar" class="font-bold">Дата прогноза:</label>
+          <label for="calendar" class="font-bold">Forecast date:</label>
           <p-calendar id="calendar" [style]="{'width':'100%'}" [showIcon]="true" [showButtonBar]="true"
                       [(ngModel)]="selectedDate">
           </p-calendar>
@@ -21,12 +20,12 @@
           <p-dropdown [options]="intervals" optionLabel="value" [(ngModel)]="selectedInterval"></p-dropdown>
         </div>
         <div class="flex flex-column gap-2">
-          <label for="observationSpots" class="font-bold">Пункт наблюдения:</label>
+          <label for="observationSpots" class="font-bold">Observation point:</label>
           <p-dropdown [style]="{'width':'100%'}" id="observationSpots" [options]="observationSpots" optionLabel="name"
                       [(ngModel)]="selectedSpot"></p-dropdown>
         </div>
         <div class="flex justify-content-center align-items-end flex-grow-1">
-          <p-button [rounded]="true" label="Показать" (onClick)=showAnalysis()></p-button>
+          <p-button [rounded]="true" label="show" (onClick)=showAnalysis()></p-button>
         </div>
       </div>
       <div class="xl:w-2">
@@ -43,12 +42,10 @@
   </ng-template>
   <ng-template pTemplate="footer">
     <div class="flex flex-column align-items-center lg:w-6 mx-auto">
-      <p class="text-center">На данной странице представлены прогностические карты параметров ветрового волнения и
-        уровня моря для акватории Каспийского моря. Эти карты основаны на расчетах, выполненных с использованием
-        спектрально-волновой модели SWAN и модели MIKE21 Flow Model FM. Для проведения этих расчетов использовались
-        оперативные метеорологические данные, предоставленные РГП «Казгидромет» и ECMWF.</p>
-      <p class="text-center">Управление гидрометеорологических исследований Каспийского моря НИЦ РГП «Казгидромет»</p>
-      <p class="text-center">Для контактов: ugmikm&#64;meteo.kz</p>
+      <p class="text-center">This page shows forecast maps of wind wave and sea level parameters for the Caspian Sea region. The maps are based on calculations using the SWAN spectral wave model and the MIKE 21 flow model FM. Operational meteorological data provided by RSE "Kazhydromet" and ECMWF have been used for these calculations. 
+        The information is updated twice a week.</p>
+      <p class="text-center">Unit of Hydrometeorological Research of the Caspian Sea of the Research Center RSE "Kazhydromet".</p>
+      <p class="text-center">For contacts: ugmikm&#64;meteo.kz</p>
     </div>
   </ng-template>
 </p-card>
