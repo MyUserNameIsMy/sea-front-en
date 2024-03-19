@@ -142,7 +142,7 @@ export class ForecastComponent implements OnInit {
         },
         {
           "folder_name": {
-            "_eq": `${this.selectedDate.getFullYear()}-${(this.selectedDate.getMonth() + 1).toString().padStart(2,'0')} - ${(this.selectedDate.getDate()).toString().padStart(2,'0')}`
+            "_eq": `${this.selectedDate.getFullYear()}-${(this.selectedDate.getMonth() + 1).toString().padStart(2,'0')}-${(this.selectedDate.getDate()).toString().padStart(2, '0')}`
           }
         }
       ]
