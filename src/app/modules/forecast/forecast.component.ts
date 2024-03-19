@@ -136,15 +136,15 @@ export class ForecastComponent implements OnInit {
     const filterValue = {
       _and: [
         {
-          "year(date)": {
-            "_eq": this.selectedDate.getFullYear()
-          },
-        },
-        {
           "observation_spot": {
             "_eq": this.selectedSpot.id
           }
-        }
+        },
+        {
+          "folder_name": {
+            "_eq": `${this.selectedDate.getFullYear()}-${(this.selectedDate.getMonth() + 1).toString().padStart(2,'0')} - ${(this.selectedDate.getDate()).toString().padStart(2,'0')}`
+          },
+        },
       ]
     }
 
