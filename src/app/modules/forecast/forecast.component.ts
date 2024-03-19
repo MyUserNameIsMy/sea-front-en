@@ -136,21 +136,6 @@ export class ForecastComponent implements OnInit {
     const filterValue = {
       _and: [
         {
-          "month(date)": {
-            "_eq": this.selectedDate.getMonth() + 1
-          },
-        },
-        {
-          "day(date)": {
-            "_gte": this.selectedDate.getDate() - 3
-          },
-        },
-        {
-          "day(date)": {
-            "_lte": this.selectedDate.getDate() + 3
-          },
-        },
-        {
           "year(date)": {
             "_eq": this.selectedDate.getFullYear()
           },
